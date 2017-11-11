@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Rafał Sroka</title>
+    <link>https://r3econ.github.io/project/</link>
+    <description>Recent content in Projects on Rafał Sroka</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Rafał Sroka</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Amboss</title>
+      <link>https://r3econ.github.io/project/amboss/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://r3econ.github.io/project/amboss/</guid>
+      <description>
+
+&lt;p&gt;Two iOS apps supporting Amboss medical knowledge platform, a smart learning system for medical students and physicians. The apps are available in Germany and United States.&lt;/p&gt;
+
+&lt;h2 id=&#34;qbank&#34;&gt;Qbank&lt;/h2&gt;
+
+&lt;table style=&#34;width:100%&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/WHW1U7D&#34;&gt;&lt;img src=&#34;https://i.imgur.com/WHW1U7Dm.png&#34; title=&#34;source: imgur.com&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/0AVFS0b&#34;&gt;&lt;img src=&#34;https://i.imgur.com/0AVFS0bm.png&#34; title=&#34;source: imgur.com&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt; 
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/UqbsFGs&#34;&gt;&lt;img src=&#34;https://i.imgur.com/UqbsFGsm.png&#34; title=&#34;source: imgur.com&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Qbank (Kreuzen) is a question bank, which is composed of exam-relevant multiple-choice questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/de/app/amboss-kreuzen-f%C3%BCr-mediziner/id1076182652?mt=8&#34; style=&#34;display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;knowledge&#34;&gt;Knowledge&lt;/h2&gt;
+
+&lt;p&gt;&lt;table style=&#34;width:100%&#34;&gt;
+    &lt;tr&gt;
+&lt;a href=&#34;https://imgur.com/Yj6MVOm&#34;&gt;&lt;img src=&#34;https://i.imgur.com/Yj6MVOmm.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://imgur.com/IJ6jqPN&#34;&gt;&lt;img src=&#34;https://i.imgur.com/IJ6jqPNm.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;
+&lt;a href=&#34;https://imgur.com/9A6KKAe&#34;&gt;&lt;img src=&#34;https://i.imgur.com/9A6KKAem.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Knowledge (Wissen) is a learning card library which contains articles on all the important medical subjects. Both apps offer full offline functionality and base on CoreData.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/de/app/amboss-wissen-f%C3%BCr-mediziner/id957328882?mt=8&#34; style=&#34;display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All four apps (US + DE) are available &lt;a href=&#34;https://itunes.apple.com/de/developer/miamed-gmbh/id918156225&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DasKochrezept</title>
+      <link>https://r3econ.github.io/project/daskochrezept/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://r3econ.github.io/project/daskochrezept/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://imgur.com/p0Z0CZ9&#34;&gt;&lt;img src=&#34;https://i.imgur.com/p0Z0CZ9m.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;right&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An iOS app for cooking enthusiasts. Built for &lt;a href=&#34;https://www.daskochrezept.de/&#34; target=&#34;_blank&#34;&gt;DasKochrezept.de&lt;/a&gt;, one of the leading food related websites and print magazines in Germany. The app got featured by Apple and reached place 6. in Food &amp;amp; Drink category in it’s first week, without marketing.&lt;/p&gt;
+
+&lt;p&gt;The app helps users find best food recipes. User can bookmark recipes creating his own cook book.The app also contains a shopping list functionality.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/de/app/daskochrezept-de-rezeptideen-zum-kochen-und-backen/id972013927?mt=8&#34; style=&#34;display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Contact me to request my full portfolio.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TrendU</title>
+      <link>https://r3econ.github.io/project/trendu/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://r3econ.github.io/project/trendu/</guid>
+      <description>&lt;table style=&#34;width:100%&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/ZHNUqUc&#34;&gt;&lt;img src=&#34;https://i.imgur.com/ZHNUqUcm.png&#34; title=&#34;source: imgur.com&#34; style=&#34;margin: 20px&#34; align=&#34;right&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/hB8MUY2&#34;&gt;&lt;img src=&#34;https://i.imgur.com/hB8MUY2m.png&#34; title=&#34;source: imgur.com&#34; style=&#34;margin: 20px&#34; align=&#34;left&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Mobile shopping iOS app exclusively for women. The app helped user find, discover and purchase pre-loved clothing. It was a mixture of social features of Facebook, auctioning services of eBay and ease of use of Tinder. I was responsible for the development and release process of the app.&lt;/p&gt;
+
+&lt;p&gt;Contact me to request my full portfolio.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>igobubble</title>
+      <link>https://r3econ.github.io/project/igobubble/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://r3econ.github.io/project/igobubble/</guid>
+      <description>&lt;table style=&#34;width:100%&#34;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/uLCuLAM&#34;&gt;&lt;img src=&#34;https://i.imgur.com/uLCuLAMm.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/40B4w78&#34;&gt;&lt;img src=&#34;https://i.imgur.com/40B4w78m.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&#34;https://imgur.com/LgeZgZC&#34;&gt;&lt;img src=&#34;https://i.imgur.com/LgeZgZCm.jpg&#34; title=&#34;source: imgur.com&#34; align=&#34;left&#34; style=&#34;margin: 20px&#34;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Social discovery app that helped users make friends with people nearby and share photos, videos, and messages in virtual living bubbles at real world places.&lt;/p&gt;
+
+&lt;p&gt;Igobubble was a mobile app that integrated location-aware social networking with digital content.&lt;/p&gt;
+
+&lt;p&gt;Users use their smartphone&amp;rsquo;s to leave digital content like photos, videos, messages and more inside bubbles at any location. After users leave, their bubbles stay behind for others to discover.&lt;/p&gt;
+
+&lt;p&gt;I worked on the iOS app and &lt;code&gt;.NET&lt;/code&gt; &lt;code&gt;C#&lt;/code&gt; backend API.&lt;/p&gt;
+
+&lt;p&gt;Contact me to request my full portfolio.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

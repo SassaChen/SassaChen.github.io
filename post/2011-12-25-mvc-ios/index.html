@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Rafał Sroka">
+  <meta name="description" content="Software Developer">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://r3econ.github.io/index.xml" type="application/rss+xml" title="Rafał Sroka">
+  <link rel="feed" href="https://r3econ.github.io/index.xml" type="application/rss+xml" title="Rafał Sroka">
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://r3econ.github.io/post/2011-12-25-mvc-ios/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Rafał Sroka">
+  <meta property="og:url" content="https://r3econ.github.io/post/2011-12-25-mvc-ios/">
+  <meta property="og:title" content="MVC design pattern in iOS | Rafał Sroka">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2011-12-25T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2011-12-25T00:00:00&#43;01:00">
+  
+
+  
+
+  <title>MVC design pattern in iOS | Rafał Sroka</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Rafał Sroka</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">MVC design pattern in iOS</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2011-12-25 00:00:00 &#43;0100 CET" itemprop="datePublished">
+      Dec 25, 2011
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=MVC%20design%20pattern%20in%20iOS&amp;url=https%3a%2f%2fr3econ.github.io%2fpost%2f2011-12-25-mvc-ios%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fr3econ.github.io%2fpost%2f2011-12-25-mvc-ios%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fr3econ.github.io%2fpost%2f2011-12-25-mvc-ios%2f&amp;title=MVC%20design%20pattern%20in%20iOS"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fr3econ.github.io%2fpost%2f2011-12-25-mvc-ios%2f&amp;title=MVC%20design%20pattern%20in%20iOS"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=MVC%20design%20pattern%20in%20iOS&amp;body=https%3a%2f%2fr3econ.github.io%2fpost%2f2011-12-25-mvc-ios%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<h2 id="model-view-controller-concept">Model-view-controller concept</h2>
+
+<p>In object-oriented programming, design patterns show a general view of how classes and objects interact, describe their relationships. They are like a sign on a crossroads, pointing to the possible solution for a given problem.</p>
+
+<p>With design patterns you can develop fast and effectively. However, using a particular design pattern is not a mandatory, the only right way of achieving desired functionality. A developer has to keep in mind all the limitation and drawbacks of using the design pattern that seems to fit well as a good solution for a given task.</p>
+
+<h2 id="quality-not-quantity">Quality, not quantity</h2>
+
+<p>Someone has recently asked me if a code that uses more design patterns is better then the code that utilizes only a few of them. Of course, it is not about the quantity. A developer may use only one design pattern (or doesn’t use any at all) and the app may work perfectly, the code can be clean and professional. It all depends on the particular application or a feature the developer is dealing with. Quality, this is what counts.</p>
+
+<h2 id="classification">Classification</h2>
+
+<p>I will not reinvent the wheel here, there is a nice presentation of the classification of the design patterns in the article about the design patterns on wikipedia.</p>
+
+<h2 id="so-how-it-looks-in-ios-development">So how it looks in iOS development?</h2>
+
+<p>Here I present some examples of classes and approaches that fulfill the rules of several design patterns. Firstly, I present the Model View Controller (MVC) pattern that you must have encountered during the development of a view (or window) based application.</p>
+
+<h2 id="model-view-controller-pattern">Model-View Controller pattern</h2>
+
+<p>In <code>MVC</code>, every controller owns a view and a model (with data presented by the view). In fact, the MVC pattern consists of a set of more primitive patterns. I will introduce them here:</p>
+
+<ul>
+<li><p>Composite – Views form a hierarchy. Each view has a strictly specified position in the view hierarchy. Each view can be drawn on screen or respond to touch events. What is more, every view can be a parent node for another set of views. This pattern is very common. When we add <code>UIButton</code>, <code>UITextField</code>, <code>UITableView</code> or any other <code>UIView</code> to the parent <code>UIView</code> of <code>UIViewController</code> we utilize this patterns.
+Command – The mighty target-action approach. Views can defer and forward execution to other objects (in most cases they forward it to our <code>UIViewController</code> subclass). The execution is forwarded to other objects when certain events occur (for instance user taps a button – <code>UIControlEventTouchUpInside</code>).</p></li>
+
+<li><p>Mediator – Our view controller mediates between our presentation layer (the views) and model layer. The interaction is bi-directional. So, if the model changes the view objects are informed about this change not directly but via the Mediator (our <code>UIViewController</code>).</p></li>
+
+<li><p>Strategy – The fact that view objects interact not directly with the Model but using the Mediator pattern with controller object gives as a good starting point to use a Strategy pattern. The controller decides which “strategy” will be the best for dealing with the particular problem (f.e. which algorithm to use with data acquired from the user by view objects).</p></li>
+
+<li><p>Observer – This pattern is very common throughout whole Cocoa. If a model gets updated it may inform all objects that registered as the observers about the change that occurred. This can also be done in the opposite direction, when model should be updated, because user interacted with the model through the view objects. Now you probably think about <code>Protocols</code>, <code>Key-Value Observing</code> and <code>Notification Center</code>. That’s right, these are all perfectly working examples of the Observer design pattern.</p></li>
+</ul>
+
+<blockquote>
+<p>References:
+Pro Objective-C Design Patterns for iOS, Carlo Chung</p>
+</blockquote>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/ios">ios</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/mvc">mvc</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Rafał Sroka &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

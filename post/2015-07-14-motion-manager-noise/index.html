@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Rafał Sroka">
+  <meta name="description" content="Software Developer">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://r3econ.github.io/index.xml" type="application/rss+xml" title="Rafał Sroka">
+  <link rel="feed" href="https://r3econ.github.io/index.xml" type="application/rss+xml" title="Rafał Sroka">
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://r3econ.github.io/post/2015-07-14-motion-manager-noise/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Rafał Sroka">
+  <meta property="og:url" content="https://r3econ.github.io/post/2015-07-14-motion-manager-noise/">
+  <meta property="og:title" content="CMMotionManager noise reduction in iOS | Rafał Sroka">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2015-07-14T00:00:00&#43;02:00">
+  
+  <meta property="article:modified_time" content="2015-07-14T00:00:00&#43;02:00">
+  
+
+  
+
+  <title>CMMotionManager noise reduction in iOS | Rafał Sroka</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Rafał Sroka</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">CMMotionManager noise reduction in iOS</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2015-07-14 00:00:00 &#43;0200 CEST" itemprop="datePublished">
+      Jul 14, 2015
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=CMMotionManager%20noise%20reduction%20in%20iOS&amp;url=https%3a%2f%2fr3econ.github.io%2fpost%2f2015-07-14-motion-manager-noise%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fr3econ.github.io%2fpost%2f2015-07-14-motion-manager-noise%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fr3econ.github.io%2fpost%2f2015-07-14-motion-manager-noise%2f&amp;title=CMMotionManager%20noise%20reduction%20in%20iOS"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fr3econ.github.io%2fpost%2f2015-07-14-motion-manager-noise%2f&amp;title=CMMotionManager%20noise%20reduction%20in%20iOS"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=CMMotionManager%20noise%20reduction%20in%20iOS&amp;body=https%3a%2f%2fr3econ.github.io%2fpost%2f2015-07-14-motion-manager-noise%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p><code>CMMotionManager</code> lets us access data from various motion sensors like accelerometer or gyroscope on iOS device.</p>
+
+<p>However, in many situations, the data we get from <code>CMMotionManager</code> is not smooth. Basically it contains noise. This article presents a way to smooth the accelerometer readings using a Low Pass Filter.</p>
+
+<p>An accelerometer reading in iOS is modelled by <code>CMAcceleration</code> which is nothing more than a simple struct:</p>
+
+<pre><code class="language-objc">typedef struct {
+      double x;
+      double y;
+      double z;
+} CMAcceleration;
+</code></pre>
+
+<p><code>x</code>, <code>y</code> and <code>z</code> are values of acceleration in <code>G</code>‘s (gravitational force unit) along <code>x</code>, <code>y</code> and <code>z</code> axis.</p>
+
+<p>What we need here is a kind of a Low-pass filter that will allow us to ignore small movements. Low-pass filter provides a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend. Effectively, it will smooth out the data we get from <code>CMMotionManager</code> by taking out the jittery. This can be done by shifting the value of each accelerometer reading into closer harmony with the values of its neighbors.</p>
+
+<p>If you ever had contact with signal processing or electronic circuit theories, you probably remember what a low pass filter was made of. Resistance and capacitance connected as depicted on the right.</p>
+
+<p>The code snippet below does exactly what we need. The named the variable in a way that should seem familiar for those that tinkered with creating electronic circuits. You can also get it from my gist repo.</p>
+
+<pre><code class="language-objc">- (CMAcceleration)smoothOutAcceleration:(CMAcceleration)acceleration {
+    static CGFloat x0 = 0;
+    static CGFloat y0 = 0;
+    static CGFloat z0 = 0;
+
+    const NSTimeInterval dt = (1.0 / 20);
+    const double RC = 0.3;
+    const double alpha = dt / (RC + dt);
+
+    CMAcceleration smoothedAcceleration;
+    smoothedAcceleration.x = (alpha * acceleration.x) + (1.0 - alpha) * x0;
+    smoothedAcceleration.y = (alpha * acceleration.y) + (1.0 - alpha) * y0;
+    smoothedAcceleration.z = (alpha * acceleration.z) + (1.0 - alpha) * z0;
+
+    x0 = smoothed.x;
+    y0 = smoothed.y;
+    z0 = smoothed.z;
+
+    return smoothedAcceleration;
+}
+</code></pre>
+
+<p>The alpha value determines how much weight to give the previous data vs the raw data. The dt is how much time elapsed between samples. <code>RC</code> value controls the aggressiveness of the filter. Bigger values mean smoother output.</p>
+
+<p>Based on <a href="https://developer.apple.com/documentation/coremotion/cmmotionmanager" target="_blank">CMMotionManager Class Reference</a>.</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/ios">ios</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/2015-04-10-sounds-in-spritekit/">Playing sounds in Sprite Kit using SKAction</a></li>
+    
+    <li><a href="/post/2014-04-09-nsrunloop/">iOS NSRunLoop in a nutshell</a></li>
+    
+    <li><a href="/post/2011-12-25-mvc-ios/">MVC design pattern in iOS</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Rafał Sroka &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
