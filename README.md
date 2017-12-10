@@ -1,3 +1,5 @@
+[![saythanks.io](https://img.shields.io/badge/saythanks.io-now-1EAEDB.svg)](https://saythanks.io/to/r3econ)
+
 # r3econ.github.io
 
 ![Website](https://i.imgur.com/KbmKugi.png)
