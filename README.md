@@ -2,10 +2,10 @@
 
 # r3econ.github.io
 
-![Website](https://i.imgur.com/KbmKugi.png)
+![Website](https://imgur.com/gPbecZO.png)
 
 My personal website. Contains a little bit of information about me and some insights into projects I worked on.
-It is available at [r3econ.github.io](https://r3econ.github.io/).
+It is available at [http://rafalsroka.com/](http://rafalsroka.com/).
 
 # Technologies used
 
